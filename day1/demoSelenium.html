@@ -67,10 +67,42 @@
 	<td>id=popuptext</td>
 	<td>Text within the pop up window</td>
 </tr>
+<!---->
 <tr>
 	<td>clickAndWait</td>
 	<td>id=closepopup</td>
-	<td>3000</td>
+	<td>30000</td>
+</tr>
+<!--todo multiple windows dan ajax-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=loadajax</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#ajaxdiv &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#ajaxdiv &gt;p </td>
+	<td>The following text has been loaded from another page on this site. It has been loaded in an asynchronous fashion so that we can work through the AJAX section of this chapter</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=divontheleft</td>
+	<td>textOnThePage</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>storeinput</td>
+	<td>${textOnThePage}</td>
 </tr>
 </tbody></table>
 </body>
