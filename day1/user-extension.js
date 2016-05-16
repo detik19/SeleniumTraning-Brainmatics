@@ -24,12 +24,12 @@ Selenium.prototype.doToday = function(locator){
 
 }
 
-Selenium.prototype.doCountDown=function(locator){
+Selenium.prototype.doCountDown=function(locator,strDate){
 	var _second = 1000;
     var _minute = _second * 60;
     var _hour = _minute * 60;
     var _day = _hour * 24;
-	var finalday=new Date('06/06/2016');
+	var finalday=new Date(strDate);
 	var now=new Date();
 	
 	var distance = finalday - now;
