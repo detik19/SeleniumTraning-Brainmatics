@@ -1,0 +1,50 @@
+package net.ruangtedy.selenium;
+
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Chapter4Test {
+	WebDriver driver;
+
+	@Before
+	public void setUp() {
+		driver = new FirefoxDriver();
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
+	@After
+	public void tearDown() {
+		driver.quit();
+	}
+
+	@Test
+	public void test() {
+		driver.navigate().to("http://book.theautomatedtester.co.uk/chapter4");
+		driver.manage().window().maximize();
+
+		driver.findElement(By.id("dateInput")).sendKeys("50");
+		
+	}
+	
+	private void CountDown(){
+		int _second = 1000;
+	    int _minute = _second * 60;
+	    int _hour = _minute * 60;
+	    int _day = _hour * 24;
+		Date  finalday=new Date(strDate);
+		Date now=new Date();
+		
+		var distance = finalday - now;
+		var days = Math.floor(distance / _day);
+	}
+	
+
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Chapter4Test" project="WebDriverDemo" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="net.ruangtedy.selenium.Chapter4Test" time="12.703">
+    <testcase name="test" classname="net.ruangtedy.selenium.Chapter4Test" time="8.115"/>
+    <testcase name="test2" classname="net.ruangtedy.selenium.Chapter4Test" time="4.588"/>
+  </testsuite>
+</testrun>

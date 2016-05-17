@@ -1,0 +1,15 @@
+package net.ruangtedy.selenium;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WebDriverDemo {
+	public static void main(String[] args) {
+		WebDriver driver =new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.navigate().to("http://calculator.net/")
+	}
+
+}
