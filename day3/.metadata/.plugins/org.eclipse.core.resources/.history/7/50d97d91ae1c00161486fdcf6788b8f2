@@ -1,0 +1,8 @@
+package net.ruangtedy.selenium;
+
+public class HeadlessSession {
+
+	public static void main(String[] args) {
+		
+	}
+}

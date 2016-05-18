@@ -1,0 +1,36 @@
+package net.ruangtedy.selenium;
+
+import java.util.concurrent.TimeUnit;
+import java.net.URL;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class RemoteSession {
+	public static void main(String args[]) throws InterruptedException, Exception {
+		RemoteSession.HeadlessSessionId();
+	}
+
+	public static void HeadlessSessionId() throws Exception {
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setBrowserName("chrome"");
+		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+		try {
+			String baseUrl = "http://www.google.com";
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver.get(baseUrl);
+			System.out.println("Title : " + driver.getTitle());
+			String browserName = capabilities.getBrowserName().toLowerCase();
+			System.out.println("Browser : " + browserName);
+			String pageSource = driver.getPageSource();
+			System.out.println("<----- page source begin ----->");
+			System.out.println(pageSource);
+			System.out.println("<----- page source end   ----->");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			driver.close();
+			driver.quit();
+		}
+	}
+}
