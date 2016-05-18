@@ -24,5 +24,7 @@
 	<classpathentry kind="lib" path="lib/phantomjsdriver-1.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/selenium-java-2.53.0.jar"/>
 	<classpathentry kind="lib" path="lib/testng-6.9.9.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-android-driver.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-api-2.26.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
